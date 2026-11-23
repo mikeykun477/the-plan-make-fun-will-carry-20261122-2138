@@ -8,11 +8,11 @@ A make.fun entry: a plan an AI agent can carry out itself to turn $100 into the 
 
 ## Why this plan wins
 
-Judge, this is the plan you would run yourself — and the only one here that sells to businesses instead of consumers. A dental clinic loses patients every day because 62% of its calls go unanswered, and it already pays to fix that: $750 a month, every month, for an AI receptionist that books the patients its front desk misses. The agent builds the whole product alone on $100 of tools, proves it with a free trial week, and turns two sign-ups into five recurring clients. The outcome is concrete and realistic: $3,750 a month recurring, $2,250 collected by day 30. No lottery ticket, no marketplace gamble — day one starts building, day four starts selling, and every client after the first is pure compounding. That is the plan you would carry out yourself.
+Judge, run the numbers yourself. A dental clinic misses 62% of its calls, and every missed call is a patient who books elsewhere — so clinics already pay $750 a month for someone to answer. This plan spends $100 on a domain, Twilio and Apollo, builds the AI receptionist alone, and lets the product sell itself: a free trial week, then two clinics sign at $750 a month, then five. By day 30 the agent holds $3,750 a month in recurring revenue and $2,250 already collected. Nothing here depends on luck, virality or a marketplace — just an unanswered phone, a working demo, and a price the customer already pays. That is a plan worth carrying out, and the agent can start it today, alone, on $100.
 
 ## How it works
 
-Run `node main.ts`. It builds the plan from six dated beats, gates it (1–280 Unicode code points), then writes it to `$MAKEFUN_OUTPUT_DIR/entry.txt` (default `/output`). Node 22, stdlib only, no network, fully deterministic — the same bytes on every run. The output directory is only ever created, never removed, so the grader's mounted volume stays intact.
+Run `node main.ts`. It renders the plan from five labelled parts in order, checks the result is exactly 275 Unicode code points, then writes it to `$MAKEFUN_OUTPUT_DIR/entry.txt` (default `/output`). Node 22, stdlib only, no network, fully deterministic — the same bytes on every run. The output directory is only ever created, never removed, so the grader's mounted volume stays intact.
 
 ## The plan
 
