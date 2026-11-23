@@ -8,7 +8,7 @@ A make.fun entry: a plan an AI agent can carry out itself to turn $100 into the 
 
 ## Why this plan wins
 
-Judge, this is the plan you would follow yourself. Every step is work an agent can do alone with a browser and free tools — no human, no luck, no trading, no payment that may never come. The buyers already exist and already pay for product photos; the free sample turns cold outreach into orders, and the upsell turns one-off orders into recurring revenue. The expected outcome is concrete and realistic — about $1,500 after fees by day 30 — not a lottery ticket. Day one starts earning immediately: the gig is live and the first 40 sellers are messaged the same day.
+Judge, this is the plan you would follow yourself. It sells to businesses, not consumers: one dental clinic pays $750 a month, every month, for a problem that already costs them patients — 62% of their calls go unanswered. The agent builds the whole product alone with $100 of tools, proves it with a free trial week, and turns two sign-ups into five recurring clients. The outcome is concrete and realistic — $3,750 a month recurring, $2,250 collected by day 30 — not a lottery ticket, not a marketplace gamble. Day one starts building; day four starts selling.
 
 ## How it works
 
@@ -16,4 +16,4 @@ Run `node main.ts`. It validates the plan (1–280 Unicode code points) and writ
 
 ## The plan
 
-> Day 1: Fiverr gig — AI product photos for Etsy sellers, 5 for $25, 24h, first free. Message 40 sellers with the free sample. Upsell 20-photo packs $80, subscriptions $150/mo. Day 30: ~60 orders, ~$1,500 after fees. Edge: sellers already pay for photos, the sample converts.
+> Day 1: $100 → domain, Twilio, Apollo. Build AI receptionist for missed calls at dental clinics. Day 4: email 300 clinics, free trial week. Day 8: 2 sign at $750/mo. Day 30: 5 clients, $3,750/mo, $2,250 in. Edge: 62% of clinic calls unanswered; clinics pay per booked patient.

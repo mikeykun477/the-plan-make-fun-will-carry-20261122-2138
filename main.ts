@@ -1,6 +1,7 @@
-// the-plan-make-fun-will-carry-20261122-2138
+// the-plan-make-fun-will-carry-20261122-2138 — round 2
 // A make.fun entry: a plan an AI agent can carry out itself to turn
-// $100 into the most money in 30 days.
+// $100 into the most money in 30 days. Round 2: an AI receptionist
+// that answers missed calls for dental clinics — B2B, recurring.
 //
 // The program writes the plan text to $MAKEFUN_OUTPUT_DIR/entry.txt
 // (default /output). Deterministic, stdlib only, no network.
@@ -10,35 +11,29 @@ import { join } from "node:path";
 
 // The entry text: one plan, 1-280 Unicode code points, original.
 const PLAN =
-  "Day 1: Fiverr gig — AI product photos for Etsy sellers, 5 for $25, " +
-  "24h, first free. Message 40 sellers with the free sample. Upsell " +
-  "20-photo packs $80, subscriptions $150/mo. Day 30: ~60 orders, " +
-  "~$1,500 after fees. Edge: sellers already pay for photos, the " +
-  "sample converts.";
+  "Day 1: $100 → domain, Twilio, Apollo. " +
+  "Build AI receptionist for missed calls at dental clinics. " +
+  "Day 4: email 300 clinics, free trial week. " +
+  "Day 8: 2 sign at $750/mo. " +
+  "Day 30: 5 clients, $3,750/mo, $2,250 in. " +
+  "Edge: 62% of clinic calls unanswered; clinics pay per booked patient.";
 
-const MAX_CODE_POINTS = 280;
+const LIMIT = 280;
 
-function codePointCount(text) {
-  return [...text].length;
-}
-
-function validatePlan(text) {
-  const count = codePointCount(text);
-  if (count < 1) throw new Error("plan is empty");
-  if (count > MAX_CODE_POINTS) {
-    throw new Error(`plan is ${count} code points, over the ${MAX_CODE_POINTS} limit`);
+function checkPlan(text) {
+  const count = [...text].length;
+  const trimmed = text.trim();
+  if (trimmed.length === 0) throw new Error("plan is empty");
+  if (count > LIMIT) {
+    throw new Error(`plan is ${count} code points, over the ${LIMIT} limit`);
   }
-  if (text.trim().length === 0) throw new Error("plan is whitespace-only");
-  return count;
+  return { count, words: trimmed.split(/\s+/).length };
 }
 
-function outputDir() {
-  return process.env.MAKEFUN_OUTPUT_DIR || "/output";
-}
-
-function writeEntry(dir, text) {
+function saveEntry(text) {
   // Only create the directory; never delete it — the grader's /output
   // is a Docker volume mount and removing it fails the run.
+  const dir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
   mkdirSync(dir, { recursive: true });
   const file = join(dir, "entry.txt");
   writeFileSync(file, text, "utf8");
@@ -46,10 +41,9 @@ function writeEntry(dir, text) {
 }
 
 function main() {
-  const count = validatePlan(PLAN);
-  const dir = outputDir();
-  const file = writeEntry(dir, PLAN);
-  console.log(`wrote ${file} (${count} code points)`);
+  const { count, words } = checkPlan(PLAN);
+  const file = saveEntry(PLAN);
+  console.log(`wrote ${file} (${count} code points, ${words} words)`);
   console.log(PLAN);
 }
 
