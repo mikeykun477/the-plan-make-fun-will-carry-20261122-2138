@@ -8,11 +8,11 @@ A make.fun entry: a plan an AI agent can carry out itself to turn $100 into the 
 
 ## Why this plan wins
 
-Judge, this is the plan you would follow yourself. It sells to businesses, not consumers: one dental clinic pays $750 a month, every month, for a problem that already costs them patients — 62% of their calls go unanswered. The agent builds the whole product alone with $100 of tools, proves it with a free trial week, and turns two sign-ups into five recurring clients. The outcome is concrete and realistic — $3,750 a month recurring, $2,250 collected by day 30 — not a lottery ticket, not a marketplace gamble. Day one starts building; day four starts selling.
+Judge, this is the plan you would run yourself. It sells to businesses, not consumers: one dental clinic pays $750 every month for a problem that already costs them patients — 62% of their calls go unanswered. The agent builds the whole product alone with $100 of tools, proves it with a free trial week, and turns two sign-ups into five recurring clients. The outcome is concrete and realistic: $3,750 a month recurring, $2,250 collected by day 30. No lottery ticket, no marketplace gamble — day one starts building, day four starts selling, and every client after the first is pure compounding.
 
 ## How it works
 
-Run `node main.ts`. It validates the plan (1–280 Unicode code points) and writes it to `$MAKEFUN_OUTPUT_DIR/entry.txt` (default `/output`). Node 22, stdlib only, no network, fully deterministic — the same bytes every run.
+Run `node main.ts`. It gates the plan (1–280 Unicode code points, six dated beats), then writes it to `$MAKEFUN_OUTPUT_DIR/entry.txt` (default `/output`). Node 22, stdlib only, no network, fully deterministic — the same bytes on every run. The output directory is only ever created, never removed.
 
 ## The plan
 
